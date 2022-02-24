@@ -1,0 +1,61 @@
+<div class="container">
+
+  <div class="form-check">
+    <input
+      type="radio"
+      class="form-check-input"
+      id="radio1"
+      name="optradio"
+      value="In Training"
+      (click)="updateList($event)"
+    />In Training
+    <label class="form-check-label" for="radio1"></label>
+  </div>
+  <div class="form-check">
+    <input
+      type="radio"
+      class="form-check-input"
+      id="radio2"
+      name="optradio"
+      value="Rookie"
+      (click)="updateList($event)"
+    />Rookie
+    <label class="form-check-label" for="radio2"></label>
+  </div>
+  <div class="form-check">
+    <input
+      type="radio"
+      class="form-check-input"
+      id="radio3"
+      name="optradio"
+      value="Champion"
+      (click)="updateList($event)"
+    />Champion
+    <label class="form-check-label" for="radio3"></label>
+  </div>
+  <div class="form-check">
+    <input
+      type="radio"
+      class="form-check-input"
+      id="radio4"
+      name="optradio"
+      value="Ultimate"
+      (click)="updateList($event)"
+    />Ultimate
+    <label class="form-check-label" for="radio4"></label>
+  </div>
+
+  <div class="row">
+    <div class="col-sm-3" *ngFor="let digimon of digimones">
+      <div class="card" style="width: 18rem">
+        <img [src]="digimon.img" class="card-img-top" alt="..." />
+        <div class="card-body">
+          <h5 class="card-title">{{ digimon.name }}</h5>
+          <p class="card-text">{{ digimon.level }}</p>
+        </div>
+      </div>
+      <br />
+    </div>
+  </div>
+</div>
+<a href="#" class="btn-flotante">Volver al inicio</a>
